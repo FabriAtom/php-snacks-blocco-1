@@ -1,6 +1,5 @@
 <?php
     $partite = [
-        $partita,
         [
         'home' => 'heat',
         'guest' => 'bulls',
@@ -20,29 +19,26 @@
         'guestScore' => 870,
         ], 
     ];
-
-    var_dump($partite);
-
     //  home - guest | homeScore-questScore
 ?>
 
 <ul>
-    <?=
+    <?php
         for ($i = 0; $i < count($partite); $i++) {
             $match = $partite[$i];
             ?>
                 <li>
-                    <?=
+                    <?php
                         echo "{$match['home']} - {$match['guest']}";
                     ?>
                     |
                     <span>
-                        <?=
+                        <?php
                           echo "{$match['homeScore']} - {$match['guestScore']}";
                         ?>
                     </span>
                 </li>
-            <?=
+            <?php
         }
     ?>
 </ul>
